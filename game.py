@@ -13,13 +13,15 @@ def play():
     level = 1
     enemy = Enemy(level)
     while player.lives > 0:
-        player.attack(enemy)
-        if enemy.level == 0:
+        try:
+            player.attack(enemy)
+            player.defence(enemy)
+            print(player.score)
+            print(player.lives)
+        except exeptions.EnemyDown:
             level += 1
-            enemy = Enemy(level)
             player.score += 5
-        player.defence(enemy)
-        print(player.score)
+            enemy = Enemy(level)
 
 
 if __name__ == '__main__':
