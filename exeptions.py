@@ -1,5 +1,4 @@
 class GameOver(Exception):
-    pass
 
     @staticmethod
     def save_result(name, score):

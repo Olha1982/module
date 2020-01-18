@@ -70,8 +70,6 @@ class Player:
             self.score += 1
         elif result == -1:
             print("You missed!")
-        else:
-            print('')
 
     # @staticmethod
     def defence(self, enemy_obj):
@@ -85,6 +83,4 @@ class Player:
             self.decrease_lives()
         elif result == -1:
             print("Your enemy missed!")
-        else:
-            print("")
 

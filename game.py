@@ -6,9 +6,6 @@ import exeptions
 def play():
     print('Enter your name: ')
     name = input()
-    print("Please enter 'start' to start the game")
-    command_start = input()
-    Player(command_start)
     player = Player(name)
     level = 1
     enemy = Enemy(level)
