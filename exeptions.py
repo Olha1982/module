@@ -1,7 +1,11 @@
 class GameOver(Exception):
-    my_file = open('scores.txt', 'w')
+    pass
 
-    my_file.close()
+    @staticmethod
+    def save_result(name, score):
+        f = open('scores.txt', 'a')
+        f.write(f"Name{score.name}, Score: {score.score} \n")
+        f.close()
 
 
 class EnemyDown(Exception):

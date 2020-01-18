@@ -5,11 +5,11 @@ import exeptions
 
 def play():
     print('Enter your name: ')
-    player_name = str(input())
+    name = str(input())
     print("Please enter 'start' to start the game")
     command_start = str(input())
     Player(command_start)
-    player = Player(player_name)
+    player = Player(name)
     level = 1
     enemy = Enemy(level)
     while player.lives > 0:

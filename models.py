@@ -15,6 +15,7 @@ class Enemy:
     def decrease_lives(self):
         self.level -= 1
         if self.level == 0:
+            print("EnemyDown")
             raise EnemyDown()
         return self.level
 
@@ -47,6 +48,7 @@ class Player:
     def decrease_lives(self):
         self.lives -= 1
         if self.lives == 0:
+            GameOver.save_result(self.name, self.score)
             raise GameOver()
         return self.lives
 
@@ -71,7 +73,7 @@ class Player:
         else:
             print('')
 
-    @staticmethod
+    # @staticmethod
     def defence(self, enemy_obj):
         enemy_attack = enemy_obj.select_attack()
         player_attack = self.choice_hero()
